@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Criterios y Especificaciones</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+  background: #white;
+
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.button {
+  background-color: #04B4AE;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Style the header */
+header {
+  background-color: #04B4AE;
+  padding: 15px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: white;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color:white;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+   position:fixed;
+   left:800px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   background:#04B4AE;
+   color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+
+<body>
+<img src="s.png" alt="siemens" style="width:180px;height:80px;">
+<center><h2 style=color:#04B4AE;>CNC SECOPS & FAB-GEN</center></h2>
+<p>Satisfaccion total del cliente a travez de la mejora continua en calidad.</p>
+<p>Con la participacion y consulta de colaboradores estamos comprometidos en minimizar y/o eliminar incidentes, peligros,riesgos enfermedades de trabajo,defectos contaminacion y desperdicios de energia..</p>
+<header>
+ <a href="https://coronavirus.gob.mx/prevencion/">
+<img src="bco.jpg" alt="HTML tutorial" style="width:520px;height:250px;">
+</a><marquee><h2>Lava tus manos con agua y jabon 20 segundos/Manten 2 metros de sana distancia/Usa Cubrebocas adecuadamente</h2></marquee>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="s.png" class="button">Metales</a></li>
+      <li><a href="Defectos.html" class="button">Defectos</a></li>
+      <li><a href="#" class="button">Liberacion de 1era Pieza</a> </li>
+       <li><a href="#" class="button">Inspeccion final</a></li>
+      <li><a href="#" class="button">Movimientos SAP</a></li>
+      <li><a href="Numeros de parte de CNC por work center.xlsx" class="button">Numeros de parte por Work Center</a></li>	
+      <li><a href="#" class="button">Capturas en PPM'S</a></li>
+      <li><a href="#" class="button">Capturas QAR</a></li>
+      <li><a href="#" class="button">Formatos</a></li>
+      <li><a href="#" class="button">Revision de Desviasiones</a></li>		
+    </ul>
+  </nav>
+  
+  <article>
+    <h1 style=color:#04B4AE;>Criterios </h1>
+    <p>Toda liberacion se hace contra dibujo.</p>
+    <img src="v.jpg" alt="vernier" 
+    style="width:350px;height:160px;">
+    <p>Recuerda mantener siempre tu area limpia.</p>
+    <img src="lim.jpg" alt="Area limpia" 
+     style="width:350px;height:160px;">
+    <p>.</p>  
+  </article>
+</section>
+
+<footer>
+  <p>Luis Carrillo Salazar</p>
+</footer>
+
+</body>
+</html>
