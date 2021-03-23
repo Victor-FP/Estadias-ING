@@ -6,5 +6,5 @@
 
   session_destroy();
 
-  header('Location: /paca');
+  header('Location: /Estadias-ING-main');
 ?>

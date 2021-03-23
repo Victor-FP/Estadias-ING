@@ -3,7 +3,7 @@
   session_start();
 
  if (isset($_SESSION['user_id'])) {
-    header('Location: /paca');
+    header('Location: /Estadias-ING-main');
   }
   require 'database.php';
 
@@ -18,7 +18,7 @@
 
     if (count($results) > 0 && password_verify($_POST['pass'], $results['Contraseña'])) {
       $_SESSION['user_id'] = $results['Num_reloj'];
-      header("Location: /paca/index.php");
+      header("Location: index.php");
     } else {
       $message = 'Lo sentimos, No se encontro datos que correspondieran';
     }

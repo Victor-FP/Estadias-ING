@@ -4,7 +4,7 @@
   require 'database.php';
 
   if (isset($_SESSION['user_id'])) {
-    $records = $conn->prepare('SELECT num_reloj, Contraseña FROM usuarios WHERE num_reloj = :num_emp');
+    $records = $conn->prepare('SELECT num_reloj, Contraseña, Nombre, Apellido_Pa, Apellido_Ma FROM usuarios WHERE num_reloj = :num_emp');
     $records->bindParam(':num_emp', $_SESSION['user_id']);
     $records->execute();
     $results = $records->fetch(PDO::FETCH_ASSOC);
@@ -24,17 +24,36 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+        
         <?php require 'partials/navbar.php'
         ?>  
+        <a href="logout.php" class="btn btn-warning" >Cerrar Sesion</a>
     </head>
     <body>
       
     <?php if(!empty($user)): ?>
-      <br> Welcome. <?= $user['num_reloj']; ?>
-      <br>You are Successfully Logged In
-      <a href="logout.php">
-        Logout
-      </a>
+      <h4> Bienvenido <?= $user['Nombre'],' ', $user['Apellido_Pa'],' ', $user['Apellido_Ma']; ?></h4>
+      <br><h2>Estos son los cursos</h2>
+      <div id="app" class="row">
+        <div class="card-group">
+        <div class="card col-sm-4" v-for="curso of cursos" >
+          <img v-bind:src="'/Estadias-ING-main/img/'+ curso.img" class="card-img-top" alt="Curso 1">
+          <div class="card-body">
+            <h5 class="card-title">{{curso.nombre}}</h5>
+            <p class="card-text">{{curso.desc}}</p>
+            <a v-bind:href="'/Estadias-ING-main/partials/modalbox.php?Blink=/Estadias-ING-main/cursos/'+curso.src">LOL</a> 
+            
+          </div>
+        </div>
+        </div>
+    </div>
+      
     <?php else: ?>
 
 
@@ -43,6 +62,8 @@
             
             <input type="submit" value="Entrar">
         </form>
-        <?php endif; ?>    
+        <?php endif; ?>  
+        <script src="js/cursos.js"></script> 
+
     </body>
 </html>
