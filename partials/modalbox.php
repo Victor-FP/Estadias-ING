@@ -14,10 +14,14 @@
  
 </head>
 
-<body>
+<body style="background-color: #F2F2F2;">
 <ul>
     <li><a width="auto" href="http://www.fletes-mexico.com/index.html">
         <img src="../img/logo.PNG" height="100px" ></a>
+        <a href="../index.php" class="btn btn-warning pl-15">Regresar</a>
+    </li>
+    <li>
+        
     </li>
 </ul>
 <style>

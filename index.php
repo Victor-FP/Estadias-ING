@@ -35,7 +35,7 @@
         ?>  
         
     </head>
-    <body>
+    <body style="background-color: #F2F2F2;">
       
     <?php if(!empty($user)): ?>
       <a href="logout.php" class="btn btn-warning" >Cerrar Sesion</a>
@@ -94,7 +94,7 @@
         <h1>Inicia sesión para continuar.</h1>
         <form action="login.php" method="post">
             
-            <input type="submit" value="Entrar">
+            <input type="submit" value="Entrar" class="btn btn-warning">
         </form>
         <?php endif; ?>  
         <script src="js/cursos.js"></script> 
