@@ -33,21 +33,55 @@
         
         <?php require 'partials/navbar.php'
         ?>  
-        <a href="logout.php" class="btn btn-warning" >Cerrar Sesion</a>
+        
     </head>
     <body>
       
     <?php if(!empty($user)): ?>
-      <h4> Bienvenido <?= $user['Nombre'],' ', $user['Apellido_Pa'],' ', $user['Apellido_Ma']; ?></h4>
+      <a href="logout.php" class="btn btn-warning" >Cerrar Sesion</a>
+      <h4> <center> Bienvenido <?= $user['Nombre'],' ', $user['Apellido_Pa'],' ', $user['Apellido_Ma']; ?></center></h4>
       <br><h2>Estos son los cursos</h2>
       <div id="app" class="row">
-        <div class="card-group">
-        <div class="card col-sm-4" v-for="curso of cursos" >
-          <img v-bind:src="'/Estadias-ING-main/img/'+ curso.img" class="card-img-top" alt="Curso 1">
+        <div class="card-group pb-5">
+        <div class="card col-md-3" v-for="curso of cursos1" >
+          <img v-bind:src="'/Estadias-ING-main/img/'+ curso.img" class="card-img-top" alt="Curso">
           <div class="card-body">
             <h5 class="card-title">{{curso.nombre}}</h5>
             <p class="card-text">{{curso.desc}}</p>
-            <a v-bind:href="'/Estadias-ING-main/partials/modalbox.php?Blink=/Estadias-ING-main/cursos/'+curso.src">LOL</a> 
+            <a class="btn btn-warning" v-bind:href="'/Estadias-ING-main/partials/modalbox.php?Blink=/Estadias-ING-main/cursos/'+curso.src">Ver Curso.</a> 
+            
+          </div>
+        </div>
+        </div>
+        <div class="card-group pb-5">
+        <div class="card col-md-3" v-for="curso of cursos2" >
+          <img v-bind:src="'/Estadias-ING-main/img/'+ curso.img" class="card-img-top" alt="Curso">
+          <div class="card-body">
+            <h5 class="card-title">{{curso.nombre}}</h5>
+            <p class="card-text">{{curso.desc}}</p>
+            <a class="btn btn-warning" v-bind:href="'/Estadias-ING-main/partials/modalbox.php?Blink=/Estadias-ING-main/cursos/'+curso.src">Ver Curso.</a> 
+            
+          </div>
+        </div>
+        </div>
+        <div class="card-group pb-5">
+        <div class="card col-md-3" v-for="curso of cursos3" >
+          <img v-bind:src="'/Estadias-ING-main/img/'+ curso.img" class="card-img-top" alt="Curso">
+          <div class="card-body">
+            <h5 class="card-title">{{curso.nombre}}</h5>
+            <p class="card-text">{{curso.desc}}</p>
+            <a class="btn btn-warning" v-bind:href="'/Estadias-ING-main/partials/modalbox.php?Blink=/Estadias-ING-main/cursos/'+curso.src">Ver Curso.</a> 
+            
+          </div>
+        </div>
+        </div>
+        <div class="card-group pb-5 col-3">
+        <div class="card" v-for="curso of cursos4" >
+          <img v-bind:src="'/Estadias-ING-main/img/'+ curso.img" class="card-img-top" alt="Curso">
+          <div class="card-body">
+            <h5 class="card-title">{{curso.nombre}}</h5>
+            <p class="card-text">{{curso.desc}}</p>
+            <a class="btn btn-warning" v-bind:href="'/Estadias-ING-main/partials/modalbox.php?Blink=/Estadias-ING-main/cursos/'+curso.src">Ver Curso.</a> 
             
           </div>
         </div>
