@@ -20,27 +20,36 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Capacitaciones</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+       
+
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
         
         <?php require 'partials/navbar.php'
         ?>  
-        
+        <style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+  </style>
     </head>
     <body style="background-color: #F2F2F2;">
       
     <?php if(!empty($user)): ?>
-      <a href="logout.php" class="btn btn-warning" >Cerrar Sesion</a>
-      <h4> <center> Bienvenido <?= $user['Nombre'],' ', $user['Apellido_Pa'],' ', $user['Apellido_Ma']; ?></center></h4>
-      <br><h2>Estos son los cursos</h2>
+      <a href="logout.php" class="btn btn-warning" style="margin-right: 10px;float: right;" >Cerrar Sesion</a>
+      <h4 style="margin-left: 10px; font-size: 25px;">  Bienvenido <?= $user['Nombre'],' ', $user['Apellido_Pa'],' ', $user['Apellido_Ma']; ?></h4>
+      <br><h2>Cursos Disponibles:</h2>
       <div id="app" class="row">
         <div class="card-group pb-5">
         <div class="card col-md-3" v-for="curso of cursos1" >
@@ -90,12 +99,60 @@
       
     <?php else: ?>
 
+      
+      <div id="demo" class="carousel slide" data-ride="carousel">
 
-        <h1>Inicia sesión para continuar.</h1>
-        <form action="login.php" method="post">
+  <!-- Indicators -->
+  <ul class="carousel-indicators" style="background-color: transparent;">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./img/hero_1.jpg" alt="Los Angeles" width="1100" height="500">
+      <div class="carousel-caption" style="margin-bottom: 100px;">
+      <h1>Inicia sesión para continuar.</h1>
+        <form action="login.php" method="post" >
             
             <input type="submit" value="Entrar" class="btn btn-warning">
         </form>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./img/hero_2.jpg" alt="Chicago" width="1100" height="500">
+      <div class="carousel-caption" style="margin-bottom: 100px;">
+      <h1>Inicia sesión para continuar.</h1>
+        <form action="login.php" method="post" >
+            
+            <input type="submit" value="Entrar" class="btn btn-warning">
+        </form>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./img/hero_3.jpg" alt="New York" width="1100" height="500">
+      <div class="carousel-caption" style="margin-bottom: 100px;">
+      <h1>Inicia sesión para continuar.</h1>
+        <form action="login.php" method="post" >
+            
+            <input type="submit" value="Entrar" class="btn btn-warning">
+        </form>
+      </div>   
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+        
         <?php endif; ?>  
         <script src="js/cursos.js"></script> 
 

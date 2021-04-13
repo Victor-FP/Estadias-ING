@@ -45,11 +45,12 @@
 <?php 
     if (isset($_GET['Blink'])) { 
         $Blink  = $_GET['Blink']; } ?>
-        <div class="main">
+        <div class="test">
             <div class="main-container">
                 <iframe src="<?php echo $Blink; ?>" title="Curso" frameborder="0" allow="accelerometer; autoplay; gyroscope; picture-in-picture;" allowfullscreen></iframe>
             </div>
-            <center><a href="#" class="btn btn-warning pt-3" >Tomar examen</a></center>
+            
+            <center><a href="/Estadias-ING-main/Examen.php" class="btn btn-warning pt-3" >Tomar examen</a></center>
         </div>
  
 </body>
