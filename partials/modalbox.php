@@ -45,6 +45,7 @@
 <?php 
     if (isset($_GET['Blink'])) { 
         $Blink  = $_GET['Blink']; } ?>
+        
         <div class="test">
             <div class="main-container">
                 <iframe src="<?php echo $Blink; ?>" title="Curso" frameborder="0" allow="accelerometer; autoplay; gyroscope; picture-in-picture;" allowfullscreen></iframe>

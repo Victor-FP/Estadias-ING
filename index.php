@@ -25,8 +25,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/style.css">
-       
-
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -36,7 +34,9 @@
         
         <?php require 'partials/navbar.php'
         ?>  
+        
         <style>
+        
   /* Make the image fully responsive */
   .carousel-inner img {
     width: 100%;
@@ -110,11 +110,11 @@
   </ul>
   
   <!-- The slideshow -->
-  <div class="carousel-inner">
+  <div class="carousel-inner" >
     <div class="carousel-item active">
       <img src="./img/hero_1.jpg" alt="Los Angeles" width="1100" height="500">
-      <div class="carousel-caption" style="margin-bottom: 100px;">
-      <h1>Inicia sesión para continuar.</h1>
+      <div class="carousel-caption" style="margin-bottom: 100px; background-color: rgba(0,0,0,0.4);">
+      <h1 >Inicia sesión para continuar.</h1>
         <form action="login.php" method="post" >
             
             <input type="submit" value="Entrar" class="btn btn-warning">
@@ -123,7 +123,7 @@
     </div>
     <div class="carousel-item">
       <img src="./img/hero_2.jpg" alt="Chicago" width="1100" height="500">
-      <div class="carousel-caption" style="margin-bottom: 100px;">
+      <div class="carousel-caption" style="margin-bottom: 100px;background-color: rgba(0,0,0,0.4);">
       <h1>Inicia sesión para continuar.</h1>
         <form action="login.php" method="post" >
             
@@ -133,7 +133,7 @@
     </div>
     <div class="carousel-item">
       <img src="./img/hero_3.jpg" alt="New York" width="1100" height="500">
-      <div class="carousel-caption" style="margin-bottom: 100px;">
+      <div class="carousel-caption" style="margin-bottom: 100px;background-color: rgba(0,0,0,0.4);">
       <h1>Inicia sesión para continuar.</h1>
         <form action="login.php" method="post" >
             
